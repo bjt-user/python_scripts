@@ -1,4 +1,4 @@
-#this script takes a textfile and converts it to a .pdf file
+#this script takes a textfile named "test.txt" and converts it to a .pdf file called "txttopdf.pdf"
 #the textfile must not have more than 35 lines
 
 from reportlab.pdfgen import canvas
@@ -13,7 +13,7 @@ pdf = canvas.Canvas(file_name)
 
 pdf.setTitle(document_title)
 
-#now read the text file and save as list
+#now read the text file (in this case "test.txt" and save as list)
 with open("test.txt", "r") as file:
     list = []
     for line in file:
