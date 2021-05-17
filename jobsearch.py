@@ -1,7 +1,7 @@
 import webbrowser
 
-AKTUALITAET = 10  #Anzahl der Tage, die das Stellenangebot alt sein darf
-ANGEBOTE = 20  #Anzahl der Angebote, die pro Seite angezeigt werden
+AKTUALITAET = 10  #nur Stellenangebote der letzten 10 Tage anzeigen
+ANGEBOTE = 20  #es werden 20 Angebote pro Seite angezeigt
 
 print("Aktualitaet = " + str(AKTUALITAET) + " (kann im Skript geaendert werden)")
 print("Angebote pro Seite = " + str(ANGEBOTE) + " (kann im Skript geaendert werden)") 
@@ -14,7 +14,9 @@ was = input()
 print("\nWo wollen Sie sich bewerben?")
 wo = input()
 
-url = "https://con.arbeitsagentur.de/prod/jobboerse/jobsuche-ui/?was=" + was + "&wo=" + wo
-+ "&page=1&size=" + str(ANGEBOTE) + "&FCT.ANGEBOTSART=ARBEIT&FCT.BEHINDERUNG=AUS&aktualitaet=" + str(AKTUALITAET)
+url = "https://con.arbeitsagentur.de/prod/jobboerse/jobsuche-ui/?was=" + was
+url = url + "&wo=" + wo
+url = url + "&page=1&size=" + str(ANGEBOTE)
+url = url + "&FCT.ANGEBOTSART=ARBEIT&FCT.BEHINDERUNG=AUS&aktualitaet=" + str(AKTUALITAET)
 
 webbrowser.open(url)
