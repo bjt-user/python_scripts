@@ -1,0 +1,2 @@
+If you don't want the "__pycache__" folder to appear, when you have a python script with more than one file,
+you can use the "B"-flag like that: "python3 -B example.py".
